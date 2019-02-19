@@ -1,11 +1,11 @@
 # Repository name: crisprlong
 ## Purpose of this repository
 - This repository contains tools for generating spacer graphs from CRISPR arrays predicted from long reads or other resources
-## What included (and not included):
+## Things included (and not included):
 - scripts/ -- scripts for clustering spacers, grouping arrays according to shared spacers, and generate spacer graphs from groups of arrays
 - third/ -- third party programs (cd-hit-est)
 - examples/ -- a folder contains example input file
-- dot for plotting (this is not included in the repository so make sure that dot is available on the computer you use to run our tools
+- dot is needed for plotting (this is not included in the repository so make sure that dot is available on the computer you use to run our tools)
 ## Main scripts
 - scripts/array2group.sh -- a bash wrapper that takes a spacer file and generates grouping of CRISPR arrays
 - scripts/group2graph.sh -- a bash wrapper that takes output from array2group.sh, and generates graphs
