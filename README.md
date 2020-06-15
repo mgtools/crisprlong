@@ -9,6 +9,10 @@
 ## Main scripts
 - scripts/array2group.sh -- a bash wrapper that takes a spacer file and generates grouping of CRISPR arrays
 - scripts/group2graph.sh -- a bash wrapper that takes output from array2group.sh, and generates graphs
+## Installation
+- only need to compile spacer-topsort as following:
+- go to scripts folder, then call
+g++ -o spacer-toposort spacer-toposort.cpp
 ## Usage
 - see examples/commands.sh for the two steps application of our tools (array2group.sh & group2graph2.sh)
 - go to examples folder, simply call "sh commands.sh" to call the two steps

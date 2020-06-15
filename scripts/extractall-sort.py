@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 import sys
-import subprocess;
+import subprocess
+import os
 
 if "check_output" not in dir( subprocess ): #old python doesn't support check_output
     def f(*popenargs, **kwargs):
@@ -26,7 +27,10 @@ if len(sys.argv) < 2:
 
 modulefile = sys.argv[1]
 
-cmd = "/u/yye/CRISPRpk/CRISPRcomp/spacer-toposort " + modulefile
+#YY 2020, June 15
+dir0 = os.path.dirname(os.path.abspath(sys.argv[0]))
+#cmd = "/u/yye/CRISPRpk/CRISPRcomp/spacer-toposort " + modulefile
+cmd = dir0 + "/spacer-toposort " + modulefile
 output = subprocess.check_output(cmd, shell=True)
 
 subs = output.split()
